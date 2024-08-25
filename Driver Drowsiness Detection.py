@@ -33,15 +33,13 @@ time.sleep(2.0)
 frame_width = 1024
 frame_height = 576
 
-# loop over the frames from the video stream
-# 2D image points. If you change the image, you need to change vector
 image_points = np.array([
-    (359, 391),     # Nose tip 34
-    (399, 561),     # Chin 9
-    (337, 297),     # Left eye left corner 37
-    (513, 301),     # Right eye right corne 46
-    (345, 465),     # Left Mouth corner 49
-    (453, 469)      # Right mouth corner 55
+    (359, 391),    
+    (399, 561),     
+    (337, 297),     
+    (513, 301),     
+    (345, 465),     
+    (453, 469)    
 ], dtype="double")
 
 (lStart, lEnd) = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"]
@@ -51,14 +49,10 @@ EYE_AR_THRESH = 0.25
 MOUTH_AR_THRESH = 0.79
 EYE_AR_CONSEC_FRAMES = 3
 COUNTER = 0
-
-# grab the indexes of the facial landmarks for the mouth
 (mStart, mEnd) = (49, 68)
 
 while True:
-    # grab the frame from the threaded video stream, resize it to
-    # have a maximum width of 400 pixels, and convert it to
-    # grayscale
+   
     frame = vs.read()
     frame = imutils.resize(frame, width=1024, height=576)
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
