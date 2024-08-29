@@ -45,12 +45,7 @@ def getHeadTiltAndCoords(size, image_points, frame_height):
     dist_coeffs = np.zeros((4, 1))  # Assuming no lens distortion
     (_, rotation_vector, translation_vector) = cv2.solvePnP(model_points, image_points,
                                                                   camera_matrix, dist_coeffs, 
-                                                                  flags = cv2.SOLVEPNP_ITERATIVE)  # flags=cv2.CV_ITERATIVE)
-
-    # print "Rotation Vector:\n {0}".format(rotation_vector)
-    # print "Translation Vector:\n {0}".format(translation_vector)
-    # Project a 3D point (0, 0 , 1000.0) onto the image plane
-    # We use this to draw a line sticking out of the nose_end_point2D
+                                                                  flags = cv2.SOLVEPNP_ITERATIVE)  
     (nose_end_point2D, _) = cv2.projectPoints(np.array(
         [(0.0, 0.0, 1000.0)]), rotation_vector, translation_vector, camera_matrix, dist_coeffs)
 
