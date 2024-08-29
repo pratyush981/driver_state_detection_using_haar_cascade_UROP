@@ -7,12 +7,10 @@ model_points = np.array([
     (0.0, 0.0, 0.0),             # Nose tip 34
     (0.0, -330.0, -65.0),        # Chin 9
     (-225.0, 170.0, -135.0),     # Left eye left corner 37
-    (225.0, 170.0, -135.0),      # Right eye right corne 46
+    (225.0, 170.0, -135.0),      # Right eye right corner 46
     (-150.0, -150.0, -125.0),    # Left Mouth corner 49
     (150.0, -150.0, -125.0)      # Right mouth corner 55
 ])
-
-# Checks if a matrix is a valid rotation matrix.
 def isRotationMatrix(R):
     Rt = np.transpose(R)
     shouldBeIdentity = np.dot(Rt, R)
@@ -21,9 +19,6 @@ def isRotationMatrix(R):
     return n < 1e-6
 
 
-# Calculates rotation matrix to euler angles
-# The result is the same as MATLAB except the order
-# of the euler angles ( x and z are swapped ).
 def rotationMatrixToEulerAngles(R):
     assert(isRotationMatrix(R))
     sy = math.sqrt(R[0, 0] * R[0, 0] + R[1, 0] * R[1, 0])
