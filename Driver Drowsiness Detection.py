@@ -14,8 +14,7 @@ from EAR import eye_aspect_ratio
 from MAR import mouth_aspect_ratio
 from HeadPose import getHeadTiltAndCoords
 import pyttsx3
-# initialize dlib's face detector (HOG-based) and then create the
-# facial landmark predictor
+
 print("[INFO] loading facial landmark predictor...")
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(
