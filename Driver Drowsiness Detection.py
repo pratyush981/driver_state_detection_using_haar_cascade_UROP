@@ -20,8 +20,6 @@ detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(
     './dlib_shape_predictor/shape_predictor_68_face_landmarks.dat')
 
-# initialize the video stream and sleep for a bit, allowing the
-# camera sensor to warm up
 print("[INFO] initializing camera...")
 
 vs = VideoStream(src=0).start()
