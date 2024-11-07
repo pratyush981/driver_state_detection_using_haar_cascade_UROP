@@ -13,5 +13,4 @@ def mouth_aspect_ratio(mouth):
     # compute the mouth aspect ratio
     mar = (A + B) / (2.0 * C)
 
-    # return the mouth aspect ratio
     return mar
