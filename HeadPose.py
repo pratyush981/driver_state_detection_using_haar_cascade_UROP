@@ -2,7 +2,7 @@ import numpy as np
 import math
 import cv2
 
-# 3D model points. 
+# 3D model points.
 model_points = np.array([
     (0.0, 0.0, 0.0),             # Nose tip 34
     (0.0, -330.0, -65.0),        # Chin 9
