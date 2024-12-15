@@ -9,7 +9,7 @@ model_points = np.array([
     (-225.0, 170.0, -135.0),     # Left eye left corner 37
     (225.0, 170.0, -135.0),      # Right eye right corner 46
     (-150.0, -150.0, -125.0),    # Left Mouth corner 49
-    (150.0, -150.0, -125.0)      # Right mouth corner 55 
+    (150.0, -150.0, -125.0)      # Right mouth corner 55
 ])
 def isRotationMatrix(R):
     Rt = np.transpose(R)
