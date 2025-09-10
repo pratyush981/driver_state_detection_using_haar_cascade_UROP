@@ -1,7 +1,7 @@
 
 # Urop phase 3
 from scipy.spatial import distance as dist  
-from imutils.video import VideoStream
+from imutils.video import VideoStream 
 from imutils import face_utils 
 import argparse
 import imutils
